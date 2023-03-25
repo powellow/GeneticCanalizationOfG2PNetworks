@@ -247,8 +247,8 @@ for (cycle.no in 1:n.cycles) {
   }
 
   #Add random error to generate phenotypes for selection
-  branching.network$`Time to Bud Outgrowth` <- branching.network$TimeToBudOutgrowth.TotalGeneticValue + rnorm(n.off.f2,0,var.e)
-  branching.network$`Sucrose` <- branching.network$Sucrose.TotalGeneticValue + rnorm(n.off.f2,0,var.e)
+  branching.network$`Time to Bud Outgrowth` <- branching.network$TimeToBudOutgrowth.TotalGeneticValue + rnorm(n.off.f2,0,sqrt(var.e))
+  branching.network$`Sucrose` <- branching.network$Sucrose.TotalGeneticValue + rnorm(n.off.f2,0,sqrt(var.e))
 
   #### Calculate Interaction Genetic Values (Total - Additive Genetic Values) ----
 
